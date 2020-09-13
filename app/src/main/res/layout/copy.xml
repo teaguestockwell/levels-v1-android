@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="48dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+
+        <RelativeLayout
+            android:id="@+id/addLBEditTextlay1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/spinnerdraw"
+            android:orientation="horizontal"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/addMomEditTextlay1"
+            app:layout_constraintStart_toEndOf="@+id/addTextTextlay1"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp"
+                android:background="@color/transparent"
+                android:cursorVisible="true"
+                android:ems="18"
+                android:gravity="center"
+                android:hint="Weight lb"
+                android:inputType="numberDecimal|numberSigned"
+                android:maxLength="7"
+                android:textColor="@color/whit87"
+                android:textColorHint="@color/hint"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addMomEditTextlay1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@id/addLBEditTextlay1"
+
+            android:background="@drawable/spinnerdraw"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addLBEditTextlay1"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp"
+                android:background="@color/transparent"
+                android:cursorVisible="true"
+                android:ems="18"
+                android:gravity="center"
+                android:hint="Fslg Station"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColor="@color/whit87"
+                android:textColorHint="@color/hint"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addTextTextlay1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/spinnerdraw"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/addLBEditTextlay1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp"
+                android:background="@color/transparent"
+                android:cursorVisible="true"
+                android:ems="18"
+                android:gravity="center"
+                android:hint="Crgo/Eqip"
+                android:inputType="textCapWords"
+                android:maxLength="10"
+                android:textColor="@color/whit87"
+                android:textColorHint="@color/hint"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

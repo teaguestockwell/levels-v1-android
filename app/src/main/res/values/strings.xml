@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">5 Level</string>
+    <string name="MAC">00.000</string>
+
+    <string name="disclaimer">Please be reminded that this app is intended for reference, and education purposes only.\n\nWhile careful consideration has been taken creating this app, we do not warrant, represent or guarantee that the material published on this app, as well as the calculations made, are in all respects accurate, complete or current. To the extent permitted by law, we exclude any liability, including any liability for negligence,  for loss, damage, or bodily injury arising from the reliance on material and calculations made in this application.\n\nIt is your sole responsibility to make sure all proper measures are taken to ensure safety.</string>
+    <string name="email">TsAppDevelopment@gmail.com</string>
+    <string name="playadd">https://play.google.com/store/apps/details?id=com.TsAppDevelopment.c17mac</string>
+
+
+    <string name="macdef">The distance between the leading and trailing edge of the wing is known as the chord.
+        If the leading edge and trailing edge are parallel, the chord of the wing is constant
+        along the wing’s length. However, because the wings on the C17 are both tapered and swept,
+        the chord changes along the span of the wing. The average length of the chord is known as the
+        mean aerodynamic chord (MAC). The MAC of the C17 is 309.5in 1C-17A-5-2(2-28)</string>
+
+    <string name="lemacdef">The Leading Edge of the Mean Aerodynamic Chord or LEMAC is a measurement of how far the
+        leading edge of the wing is from the reference datum. For swept-wing aircraft, the LEMAC is an average of the
+        distance the leading edge of the wing is from the reference datum. The LEMAC of the C17 is located 793.6in from the reference datum. 1C-17A-5-2(2-28)</string>
+
+    <string name="fsdef">An imaginary plane, that runs along the length of the aircraft. It is identified
+by its distance from the reference datum in inches. FS 0 starts at the reference datum. 1C-17A-5-2(2-28)</string>
+
+    <string name="refdef">The reference datum is a point located 80.5in forward of the nose of the C17. 1C-17A-5-2(2-28)</string>
+
+    <string name="balarmdef">The balance arm is the horizontal distance between the reference datum and the center or gravity. Balance arm = total simplified moment X 10,000 / total weight lb. </string>
+
+
+    <string name="momdef">The moment of an item is weight in lb multiplied by its arm(distance from the reference datum). Moment is measured
+        in inch-pounds. Moment = Weight in lb x arm. Simplified moment = moment/10000. The moment of fuel is measured in simplified moment and
+        can be found in tables 2-5 or 2-9 for ER jets. The weight and moment of items can be found in AFI 11-2C17V3ADD-A and 1C-17A-5-2.  </string>
+
+
+    <string name="Chartcdef">The Chart C is a record of the aircraft weight and balance that is continuously updated by a qualified weight and balance technician.
+        Some equipment is provided by the manufacturer during aircraft delivery to the Air Force and is included in the aircraft\'s basic weight. Further, To standardize equipment and its
+location, items listed in Addenda A Table 2.1 are included in the basic weight of the aircraft.  </string>
+
+    <string name="addendadef">Configurations with common items, such as sidewall seat life vests, are listed in the Addenda A chapter 3. The weight and moment of these common configurations or their items can be added as cargo into the calculator. For the most accurate calculation, if the item is not accounted
+        for in the Chart C, not listed in Addenda A table 2.1 as equipment that is included in the aircraft basic weight, add its weight and FS into the calculator.</string>
+
+    <string name="adahyper">\nhttps://static.e-publishing.af.mil/production/1/af_a3/publication/afman11-2c-17v3add-a/afman11-2c-17v3add-a.pdf </string>
+
+    <string name="permacdef">The Percent Mean Aerodynamic Chord identifies where the center or gravity is along the chord of the wing. 0% MAC
+    is located at the LEMAC, and 100% MAC is at the TEMAC(Trailing Edge Mean Aerodynamic Chord). The formula for calculating %MAC is (Balance Arm - LEMAC) / MAC) X 100 1C-17A-5-2(2-28).
+
+    </string>
+    <string name="title_activity_activitymanger">5 Level</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_main2">5 Level</string>
+
+
+</resources>

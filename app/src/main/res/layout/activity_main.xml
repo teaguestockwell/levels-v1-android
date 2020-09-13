@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contextClickable="false"
+    android:isScrollContainer="false"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+
+    <RelativeLayout
+        android:id="@+id/disclaimerrellayroot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+
+        android:id="@+id/topBoxRelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disclaimerrellayroot">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/notbar"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="%MAC"
+            android:textAlignment="viewStart"
+            android:textColor="@color/whit87"
+            android:textSize="20dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/moreOptionsImageButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/kebab" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mmoptionsrellay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/topBoxRelativeLayout1" />
+
+    <ScrollView
+        android:id="@+id/mainscroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="false"
+        android:isScrollContainer="true"
+        app:layout_constraintBottom_toTopOf="@+id/botBarlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mmoptionsrellay"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                app:cardBackgroundColor="@color/notbar"
+                app:cardCornerRadius="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:text="Aircraft"
+                            android:textAlignment="center"
+                            android:textColor="@color/Lemac"
+                            android:textSize="24sp" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:alpha=".08"
+                            android:background="@color/white" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="MDS"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+
+                        <RelativeLayout
+                            android:layout_width="85dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/MDSspinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@android:color/transparent"
+                                android:dropDownVerticalOffset="0dp"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown"
+                                android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/down" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                app:cardBackgroundColor="@color/notbar"
+                app:cardCornerRadius="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:text="Fuel lb"
+                            android:textAlignment="center"
+                            android:textColor="@color/Balarm"
+                            android:textSize="24sp"
+                            tools:text="Fuel lb" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:alpha=".08"
+                            android:background="@color/white" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Extended Range"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp"
+                            tools:text="Extended Range" />
+
+                        <Switch
+                            android:id="@+id/erSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="4dp"
+                            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Tank 1"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp"
+                            tools:text="Tank 1" />
+
+
+                        <RelativeLayout
+                            android:layout_width="85dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/tank1Spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@android:color/transparent"
+                                android:dropDownVerticalOffset="0dp"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown"
+                                android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/down" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:id="@+id/tank2TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Tank 2"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp"
+                            tools:text="Tank 2" />
+
+
+                        <RelativeLayout
+                            android:layout_width="85dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/tank3Spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@android:color/transparent"
+                                android:dropDownVerticalOffset="0dp"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown"
+                                android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/down" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:id="@+id/tank3TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Tank 3"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp"
+                            tools:text="Tank 3" />
+
+
+                        <RelativeLayout
+                            android:layout_width="85dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/tank2Spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@android:color/transparent"
+                                android:dropDownVerticalOffset="0dp"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown"
+                                android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/down" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Tank 4"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp"
+                            tools:text="Tank 4" />
+
+
+                        <RelativeLayout
+                            android:layout_width="85dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/tank4Spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@android:color/transparent"
+                                android:dropDownVerticalOffset="0dp"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown"
+                                android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/down" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                app:cardBackgroundColor="@color/notbar"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:text="Chart C"
+                            android:textAlignment="center"
+                            android:textColor="@color/weight"
+                            android:textSize="24sp"
+                            tools:text="Chart C" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:alpha=".08"
+                            android:background="@color/white" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Basic Lng Mom."
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp"
+                            tools:text="Basic Lng Mom." />
+
+
+                        <RelativeLayout
+                            android:id="@+id/basicMomEditTextlay"
+                            android:layout_width="85dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:id="@+id/basicmomeEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/transparent"
+                                android:cursorVisible="true"
+                                android:ems="18"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:maxLength="8"
+                                android:textColor="@color/whit87"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Basic Weight"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp"
+                            tools:text="Basic Weight" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/basicWeightEditTextlay"
+                            android:layout_width="85dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:id="@+id/basicweightEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/transparent"
+                                android:cursorVisible="true"
+                                android:ems="18"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:maxLength="8"
+                                android:textColor="@color/whit87"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                app:cardBackgroundColor="@color/notbar"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:id="@+id/miscLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:text="Misc"
+                            android:textColor="@color/moment"
+                            android:textSize="24sp"
+                            tools:text="Misc." />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:alpha=".08"
+                            android:background="@color/white" />
+
+
+                        <ImageButton
+                            android:id="@+id/addButton"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="1dp"
+
+                            android:backgroundTint="#00FFFFFF"
+                            android:paddingEnd="40dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            app:srcCompat="@drawable/add" />
+
+                        <ImageButton
+                            android:id="@+id/deleteButton"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+
+                            android:backgroundTint="#00FFFFFF"
+                            android:paddingLeft="40dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            app:srcCompat="@drawable/delete" />
+
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Add Equip"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+
+                        <RelativeLayout
+                            android:layout_width="85dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/seSpin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@android:color/transparent"
+                                android:dropDownVerticalOffset="-700dp"
+                                android:gravity="center"
+                                android:paddingRight="14dp"
+                                android:spinnerMode="dropdown"
+                                android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/down" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Acft Armor"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+                        <Switch
+                            android:id="@+id/armorSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="4dp"
+                            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Flares + Flare Containers"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+                        <Switch
+                            android:id="@+id/flaresSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="4dp"
+                            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/notbar"
+                app:cardCornerRadius="8dp">
+
+                <ImageButton
+                    android:id="@+id/submitImageBut"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/submitselector"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Calculate %MAC"
+                    android:textColor="@color/whit87"
+                    android:textSize="24sp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/botbattext"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:text="Time"
+            android:textColor="@color/white50"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:text="Units"
+            android:textColor="@color/white50"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:text="%MAC"
+            android:textColor="@color/white"
+            android:textSize="10sp">
+
+
+        </TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:text="Glossary"
+            android:textColor="@color/white50"
+            android:textSize="10sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/botBarlay"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/IB0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/submitselector"
+            android:paddingBottom="14dp"
+            app:srcCompat="@drawable/timegrey" />
+
+        <ImageButton
+            android:id="@+id/IB1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/submitselector"
+            android:paddingBottom="14dp"
+            app:srcCompat="@drawable/unitsicongrey_foreground" />
+
+        <ImageButton
+            android:id="@+id/IB2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/submitselector"
+            android:paddingBottom="14dp"
+            app:srcCompat="@drawable/macicon_foreground">
+
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/IB3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/submitselector"
+            android:paddingBottom="14dp"
+            app:srcCompat="@drawable/faq" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="whiteD">#12FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white40">#CCFFFFFF</color>
+    <color name="hint">#29FFFFFF</color>
+
+
+    <color name="white50">#80FFFFFF</color>
+    <color name="whit87">#CCFFFFFF</color>
+    <color name="notbar">#0FFFFFFF</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="pressed">#33ffffff</color>
+    <color name="error">#BAFF0000</color>
+
+
+
+
+
+
+    <color name="moment">#B39DDB</color>
+    <color name="weight">#90CAF9</color>
+    <color name="Balarm">#F48FB1</color>
+    <color name="Lemac">#A5D6A7</color>
+    <color name="Mac">#FFCC80</color>
+    <color name="hyper">#3E62D2</color>
+
+
+
+</resources>

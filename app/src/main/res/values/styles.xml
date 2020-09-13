@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/whit87</item>
+        <item name="android:textColorSecondary">@color/whit87</item>
+        <item name="android:textColorPrimary">@color/whit87</item>
+        <item name="colorPrimaryDark">@color/notbar</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:colorPressedHighlight">@color/pressed</item>
+
+        <item name="colorControlActivated">@color/whit87</item>
+        <item name="thumbTint">@color/white</item>
+        <item name="trackTint">@color/white</item>
+        <item name="android:colorAccent">@color/whit87</item>
+        <item name="colorAccent">@color/whit87</item>
+        <item name="android:windowAnimationStyle">@null</item>
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+</resources>

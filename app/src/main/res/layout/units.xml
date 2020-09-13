@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contextClickable="false"
+    android:isScrollContainer="false"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+
+    <RelativeLayout
+        android:id="@+id/disclaimerrellayroot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+
+        android:id="@+id/topBoxRelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disclaimerrellayroot">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/notbar"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Units"
+            android:textAlignment="viewStart"
+            android:textColor="@color/whit87"
+            android:textSize="20dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/calcpermacTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:alpha="1"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/moreOptionsImageButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/kebab" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mmoptionsrellay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/topBoxRelativeLayout1" />
+
+    <ScrollView
+        android:id="@+id/mainscroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="false"
+        android:isScrollContainer="true"
+        app:layout_constraintBottom_toTopOf="@+id/botBarlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mmoptionsrellay">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                app:cardBackgroundColor="@color/notbar"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:text="Distance "
+                            android:textAlignment="center"
+                            android:textColor="@color/Mac"
+                            android:textSize="24sp" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:alpha=".08"
+                            android:background="@color/white" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Miles"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/card0lay0"
+                            android:layout_width="120dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:textColorHint="@drawable/hint_selector"
+                                android:id="@+id/milesET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/transparent"
+                                android:cursorVisible="true"
+                                android:ems="18"
+                                android:gravity="center"
+                                android:inputType="number|numberDecimal"
+                                android:maxLength="11"
+                                android:textColor="@color/whit87"
+                                android:autoSizeTextType="uniform" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Feet"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/card0lay1"
+                            android:layout_width="120dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:textColorHint="@drawable/hint_selector"
+                                android:id="@+id/feetET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/transparent"
+                                android:cursorVisible="true"
+                                android:ems="18"
+                                android:gravity="center"
+                                android:inputType="number|numberDecimal"
+                                android:maxLength="11"
+                                android:textColor="@color/whit87"
+                                android:autoSizeTextType="uniform" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Kilometers"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/card0lay2"
+                            android:layout_width="120dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:textColorHint="@drawable/hint_selector"
+                                android:id="@+id/kmET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/transparent"
+                                android:cursorVisible="true"
+                                android:ems="18"
+                                android:gravity="center"
+                                android:inputType="number|numberDecimal"
+                                android:maxLength="11"
+                                android:textColor="@color/whit87"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Meters"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/card0lay3"
+                            android:layout_width="120dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:textColorHint="@drawable/hint_selector"
+                                android:id="@+id/metersET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/transparent"
+                                android:cursorVisible="true"
+                                android:ems="18"
+                                android:gravity="center"
+                                android:inputType="number|numberDecimal"
+                                android:maxLength="11"
+                                android:textColor="@color/whit87"
+                                android:autoSizeTextType="uniform" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Nautical Miles"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/card0lay4"
+                            android:layout_width="120dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:textColorHint="@drawable/hint_selector"
+                                android:id="@+id/nMilesET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/transparent"
+                                android:cursorVisible="true"
+                                android:ems="18"
+                                android:gravity="center"
+                                android:inputType="number|numberDecimal"
+                                android:maxLength="11"
+                                android:textColor="@color/whit87"
+                                android:autoSizeTextType="uniform" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/notbar"
+                app:cardCornerRadius="8dp">
+
+                <ImageButton
+                    android:id="@+id/IBsub0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/submitselector"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Convert Distance"
+                    android:textColor="@color/whit87"
+                    android:textSize="24sp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                app:cardBackgroundColor="@color/notbar"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:text="Weight"
+                            android:textAlignment="center"
+                            android:textColor="@color/weight"
+                            android:textSize="24sp" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:alpha=".08"
+                            android:background="@color/white" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Pounds"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/card1lay0"
+                            android:layout_width="120dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:textColorHint="@drawable/hint_selector"
+                                android:id="@+id/poundsET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/transparent"
+                                android:cursorVisible="true"
+                                android:ems="18"
+                                android:gravity="center"
+                                android:inputType="number|numberDecimal"
+                                android:maxLength="11"
+                                android:textColor="@color/whit87"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Kilograms"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/card1lay1"
+                            android:layout_width="120dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:textColorHint="@drawable/hint_selector"
+                                android:id="@+id/kilogramsET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/transparent"
+                                android:cursorVisible="true"
+                                android:ems="18"
+                                android:gravity="center"
+                                android:inputType="number|numberDecimal"
+                                android:maxLength="11"
+                                android:textColor="@color/whit87"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/notbar"
+                app:cardCornerRadius="8dp">
+
+                <ImageButton
+                    android:id="@+id/IBsub1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/submitselector"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Convert Weight"
+                    android:textColor="@color/whit87"
+                    android:textSize="24sp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                app:cardBackgroundColor="@color/notbar"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:text="Volume"
+                            android:textAlignment="center"
+                            android:textColor="@color/Lemac"
+                            android:textSize="24sp" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:alpha=".08"
+                            android:background="@color/white" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Gallons"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/card2lay0"
+                            android:layout_width="120dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:textColorHint="@drawable/hint_selector"
+                                android:id="@+id/gallonsET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/transparent"
+                                android:cursorVisible="true"
+                                android:ems="18"
+                                android:gravity="center"
+                                android:inputType="number|numberDecimal"
+                                android:maxLength="11"
+                                android:textColor="@color/whit87"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/whiteD"
+                        android:orientation="horizontal" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:text="Liters"
+                            android:textColor="@color/whit87"
+                            android:textSize="24sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/card2lay1"
+                            android:layout_width="120dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/spinnerdraw"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:textColorHint="@drawable/hint_selector"
+                                android:id="@+id/LitersET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/transparent"
+                                android:cursorVisible="true"
+                                android:ems="18"
+                                android:gravity="center"
+                                android:inputType="number|numberDecimal"
+                                android:maxLength="11"
+                                android:textColor="@color/whit87"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/notbar"
+                app:cardCornerRadius="8dp">
+
+                <ImageButton
+                    android:id="@+id/IBsub2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/submitselector"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Convert Volume"
+                    android:textColor="@color/whit87"
+                    android:textSize="24sp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/botbattext"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:text="Time"
+            android:textColor="@color/white50"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:text="Units"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:text="%MAC"
+            android:textColor="@color/white50"
+            android:textSize="10sp">
+
+
+        </TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:text="Glossary"
+            android:textColor="@color/white50"
+            android:textSize="10sp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/botBarlay"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/IB0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/submitselector"
+            android:paddingBottom="14dp"
+            app:srcCompat="@drawable/timegrey" />
+
+        <ImageButton
+            android:id="@+id/IB1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/submitselector"
+            android:paddingBottom="14dp"
+            app:srcCompat="@drawable/unitsicon_foreground" />
+
+        <ImageButton
+            android:id="@+id/IB2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/submitselector"
+            android:paddingBottom="14dp"
+            app:srcCompat="@drawable/macicongrey_foreground">
+
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/IB3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/submitselector"
+            android:paddingBottom="14dp"
+            app:srcCompat="@drawable/faq" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
